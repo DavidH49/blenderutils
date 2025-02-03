@@ -11,8 +11,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+
 bl_info = {
-    "name": "Ddds_blenderutils",
+    "name": "DDDs_Blenderutils",
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
@@ -31,7 +32,6 @@ else:
     from . import ui
     from . import bevel
     from . import array
-
 
 import bpy
 

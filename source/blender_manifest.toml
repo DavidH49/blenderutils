@@ -4,18 +4,18 @@ schema_version = "1.0.0"
 # Change the values according to your extension
 id = "ddds_blenderutils"
 version = "1.0.0"
-name = "Ddds_blenderutils"
+name = "DDDs_Blenderutils"
 tagline = "This is another extension"
 maintainer = "DDD"
 # Supported types: "add-on", "theme"
 type = "add-on"
 
 # Optional link to documentation, support, source files, etc
-# website = "https://extensions.blender.org/add-ons/my-example-package/"
+website = "https://github.com/DavidH49/blenderutils"
 
 # Optional list defined by Blender and server, see:
 # https://docs.blender.org/manual/en/dev/advanced/extensions/tags.html
-tags = ["Animation", "Sequencer"]
+tags = ["3D View", "Object"]
 
 blender_version_min = "4.2.0"
 # # Optional: Blender version that the extension does not support, earlier versions are supported.
