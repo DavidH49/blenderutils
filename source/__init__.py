@@ -1,0 +1,56 @@
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTIBILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+bl_info = {
+    "name": "Ddds_blenderutils",
+    "author": "DDD",
+    "description": "",
+    "blender": (4, 2, 2),
+    "version": (1, 0, 0),
+    "location": "",
+    "warning": "",
+    "category": "Generic",
+}
+
+if "bpy" in locals():
+    import importlib
+    importlib.reload(ui)
+    importlib.reload(bevel)
+    importlib.reload(array)
+else:
+    from . import ui
+    from . import bevel
+    from . import array
+
+
+import bpy
+
+
+def register():
+    bpy.utils.register_class(ui.VIEW3D_PT_ddd_utils)
+    bpy.utils.register_class(bevel.OBJECT_OT_quickbevel)
+    bpy.utils.register_class(array.OBJECT_OT_array1d)
+    bpy.utils.register_class(array.OBJECT_OT_array2d)
+    bpy.utils.register_class(array.OBJECT_OT_array3d)
+
+
+def unregister():
+    bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_utils)
+    bpy.utils.unregister_class(bevel.OBJECT_OT_quickbevel)
+    bpy.utils.unregister_class(array.OBJECT_OT_array1d)
+    bpy.utils.unregister_class(array.OBJECT_OT_array2d)
+    bpy.utils.unregister_class(array.OBJECT_OT_array3d)
+
+
+if __package__ == "__main__":
+    register()
