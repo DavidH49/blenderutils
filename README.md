@@ -9,3 +9,5 @@ Version 1.0.0 contains:
 * Array 1D
 * Array 2D
 * Array 3D
+
+To build, create a folder named *"build"* and run *build.sh*
