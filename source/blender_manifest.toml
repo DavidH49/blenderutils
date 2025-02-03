@@ -3,10 +3,10 @@ schema_version = "1.0.0"
 # Example of manifest file for a Blender extension
 # Change the values according to your extension
 id = "ddds_blenderutils"
-version = "1.0.0"
-name = "DDDs_Blenderutils"
-tagline = "This is another extension"
-maintainer = "DDD"
+version = "1.1.0"
+name = "DDDs Blenderutils"
+tagline = "Small utility extension"
+maintainer = "Daniel D. Dauersuff"
 # Supported types: "add-on", "theme"
 type = "add-on"
 

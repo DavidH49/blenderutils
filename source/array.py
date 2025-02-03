@@ -49,6 +49,8 @@ class OBJECT_OT_array2d(bpy.types.Operator):
             
             active = context.active_object
             
+            active.modifiers[-2].name = 'Array X'
+            active.modifiers[-1].name = 'Array Y'
             active.modifiers[-1].relative_offset_displace = (0, 1, 0)
             active.modifiers[-2].count = self.count_x
             active.modifiers[-1].count = self.count_y
@@ -81,6 +83,9 @@ class OBJECT_OT_array3d(bpy.types.Operator):
 
             active = context.active_object
 
+            active.modifiers[-3].name = 'Array X'
+            active.modifiers[-2].name = 'Array Y'
+            active.modifiers[-1].name = 'Array Z'
             active.modifiers[-2].relative_offset_displace = (0, 1, 0)
             active.modifiers[-1].relative_offset_displace = (0, 0, 1)
             active.modifiers[-3].count = self.count_x

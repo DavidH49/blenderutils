@@ -13,11 +13,11 @@
 
 
 bl_info = {
-    "name": "DDDs_Blenderutils",
+    "name": "DDDs Blenderutils",
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
-    "version": (1, 0, 0),
+    "version": (1, 1, 0),
     "location": "",
     "warning": "",
     "category": "Generic",
@@ -38,6 +38,7 @@ import bpy
 
 def register():
     bpy.utils.register_class(ui.VIEW3D_PT_ddd_utils)
+    bpy.utils.register_class(ui.VIEW3D_PT_ddd_array)
     bpy.utils.register_class(bevel.OBJECT_OT_quickbevel)
     bpy.utils.register_class(array.OBJECT_OT_array1d)
     bpy.utils.register_class(array.OBJECT_OT_array2d)
@@ -46,6 +47,7 @@ def register():
 
 def unregister():
     bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_utils)
+    bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_array)
     bpy.utils.unregister_class(bevel.OBJECT_OT_quickbevel)
     bpy.utils.unregister_class(array.OBJECT_OT_array1d)
     bpy.utils.unregister_class(array.OBJECT_OT_array2d)
