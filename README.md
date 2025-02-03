@@ -10,4 +10,4 @@ I mainly made this addon for my personal workflow, so I can add things like two 
 * Array 3D
 
 ### Building
-To build the extension, create a folder named *"build"* and run *build.sh*
+To build the extension, run *build.sh*
