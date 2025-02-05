@@ -17,7 +17,7 @@ bl_info = {
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
-    "version": (1, 1, 0),
+    "version": (1, 2, 0),
     "location": "",
     "warning": "",
     "category": "Generic",
@@ -28,10 +28,16 @@ if "bpy" in locals():
     importlib.reload(ui)
     importlib.reload(bevel)
     importlib.reload(array)
+    importlib.reload(objects)
+    importlib.reload(meshes)
+    importlib.reload(util)
 else:
     from . import ui
     from . import bevel
     from . import array
+    from . import objects
+    from . import meshes
+    from . import util
 
 import bpy
 
@@ -43,6 +49,10 @@ def register():
     bpy.utils.register_class(array.OBJECT_OT_array1d)
     bpy.utils.register_class(array.OBJECT_OT_array2d)
     bpy.utils.register_class(array.OBJECT_OT_array3d)
+    bpy.utils.register_class(objects.OBJECT_OT_corncube)
+    bpy.utils.register_class(objects.OBJECT_OT_botcube)
+
+    bpy.types.VIEW3D_MT_mesh_add.append(objects.menu_func)
 
 
 def unregister():
@@ -52,6 +62,10 @@ def unregister():
     bpy.utils.unregister_class(array.OBJECT_OT_array1d)
     bpy.utils.unregister_class(array.OBJECT_OT_array2d)
     bpy.utils.unregister_class(array.OBJECT_OT_array3d)
+    bpy.utils.unregister_class(objects.OBJECT_OT_corncube)
+    bpy.utils.unregister_class(objects.OBJECT_OT_botcube)
+
+    bpy.types.VIEW3D_MT_mesh_add.remove(objects.menu_func)
 
 
 if __package__ == "__main__":

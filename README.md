@@ -1,13 +1,18 @@
 # DDDs Blenderutils
 
 Very simple utility addon.  
-I mainly made this addon for my personal workflow, so I can add things like two arrays with one click.  
+I made this addon for my specific personal workflow, so I can quickly add things like a cube with its origin on its bottom face, which I have to do very often.
 
-### Version 1.0.0 contains:
+## Version 1.2.0 contains:
+#### Operators | Side Panel -> DDD
 * Quick Bevel
 * Array 1D
 * Array 2D
 * Array 3D
 
-### Building
+#### Objects | Add Object -> Mesh
+* Bottom Cube
+* Corner Cube
+
+## Building
 To build the extension, run *build.sh*
