@@ -15,4 +15,4 @@ I made this addon for my specific personal workflow, so I can quickly add things
 * Corner Cube
 
 ## Building
-To build the extension, run *build.sh*
+To build the extension, run *build.sh* or *build.bat*
