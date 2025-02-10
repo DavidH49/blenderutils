@@ -26,3 +26,22 @@ class OBJECT_OT_quickbevel(bpy.types.Operator):
             pass
         
         return { 'FINISHED' }
+
+
+class OBJECT_OT_quickmirror(bpy.types.Operator):
+    """Mirror"""
+    bl_idname = "object.quickmirror"
+    bl_label = "Quick Mirror"
+    bl_options = { 'REGISTER', 'UNDO' }
+
+    @classmethod
+    def poll(cls, context):
+        return context.area.type == "VIEW_3D"
+    
+    def execute(self, context):
+        try:
+            bpy.ops.object.modifier_add(type='MIRROR')
+        except RuntimeError:
+            pass
+
+        return { 'FINISHED' }
