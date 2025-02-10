@@ -17,7 +17,7 @@ bl_info = {
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
-    "version": (1, 2, 0),
+    "version": (1, 3, 0),
     "location": "",
     "warning": "",
     "category": "Generic",
@@ -29,14 +29,12 @@ if "bpy" in locals():
     importlib.reload(bevel)
     importlib.reload(array)
     importlib.reload(objects)
-    importlib.reload(meshes)
     importlib.reload(util)
 else:
     from . import ui
     from . import bevel
     from . import array
     from . import objects
-    from . import meshes
     from . import util
 
 import bpy

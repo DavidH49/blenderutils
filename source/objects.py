@@ -1,6 +1,5 @@
 import bpy
 from . import util
-from . import meshes
 
 
 class OBJECT_OT_corncube(bpy.types.Operator):
@@ -9,15 +8,7 @@ class OBJECT_OT_corncube(bpy.types.Operator):
     bl_options = { 'REGISTER', 'UNDO' }
 
     def execute(self, context):
-        util.deselect_all()
-
-        mesh = meshes.MESH_CORNCUBE
-        mesh_data = util.construct_mesh_data("corncube", mesh.verts, mesh.edges, mesh.faces)
-        mesh_obj = util.construct_mesh_obj(self.bl_label, mesh_data)
-
-        util.select_mesh(mesh_obj)
-        util.recalc_normals()
-
+        util.construct_cube((1, 1, 1))
         return { 'FINISHED' }
 
 
@@ -27,15 +18,7 @@ class OBJECT_OT_botcube(bpy.types.Operator):
     bl_options = { 'REGISTER', 'UNDO' }
 
     def execute(self, context):
-        util.deselect_all()
-
-        mesh = meshes.MESH_BOTTOMCUBE
-        mesh_data = util.construct_mesh_data("botcube", mesh.verts, mesh.edges, mesh.faces)
-        mesh_obj = util.construct_mesh_obj(self.bl_label, mesh_data)
-
-        util.select_mesh(mesh_obj)
-        util.recalc_normals()
-
+        util.construct_cube((0, 0, 1))
         return { 'FINISHED' }
 
 
