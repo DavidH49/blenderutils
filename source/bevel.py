@@ -1,4 +1,5 @@
 import bpy
+from . import util
 
 
 class OBJECT_OT_quickbevel(bpy.types.Operator):
@@ -25,4 +26,25 @@ class OBJECT_OT_quickbevel(bpy.types.Operator):
         except RuntimeError:
             pass
         
+        return { 'FINISHED' }
+
+
+class OBJECT_OT_customcube(bpy.types.Operator):
+    """Construct a cube with a custom origin"""
+    bl_idname = "object.customcube"
+    bl_label = "Construct Cube"
+    bl_options = { 'REGISTER', 'UNDO' }
+
+    location: bpy.props.FloatVectorProperty(name='Location', default=(0, 0, 0))
+
+    @classmethod
+    def poll(cls, context):
+        return context.area.type == "VIEW_3D"
+    
+    def execute(self, context):
+        try:
+            util.construct_cube(self.location)
+        except RuntimeError:
+            pass
+
         return { 'FINISHED' }
