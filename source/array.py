@@ -1,7 +1,4 @@
 import bpy
-P = bpy.props
-U = bpy.utils
-O = bpy.ops
 
 
 class OBJECT_OT_array1d(bpy.types.Operator):
@@ -10,7 +7,7 @@ class OBJECT_OT_array1d(bpy.types.Operator):
     bl_label = "Add Array 1D"
     bl_options = { 'REGISTER', 'UNDO' }
 
-    count: P.IntProperty(name='Count', default=2, min=1)
+    count: bpy.props.IntProperty(name='Count', default=2, min=1)
 
     @classmethod
     def poll(cls, context):
@@ -18,7 +15,7 @@ class OBJECT_OT_array1d(bpy.types.Operator):
     
     def execute(self, context):
         try:
-            O.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
 
             active = context.active_object
             active.modifiers[-1].count = self.count
@@ -35,8 +32,8 @@ class OBJECT_OT_array2d(bpy.types.Operator):
     bl_label = "Add Array 2D"
     bl_options = { 'REGISTER', 'UNDO' }
     
-    count_x: P.IntProperty(name='Count X', default=2, min=1)
-    count_y: P.IntProperty(name='Count Y', default=2, min=1)
+    count_x: bpy.props.IntProperty(name='Count X', default=2, min=1)
+    count_y: bpy.props.IntProperty(name='Count Y', default=2, min=1)
     
     @classmethod
     def poll(cls, context):
@@ -44,8 +41,8 @@ class OBJECT_OT_array2d(bpy.types.Operator):
     
     def execute(self, context):
         try:
-            O.object.modifier_add(type='ARRAY')
-            O.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
             
             active = context.active_object
             
@@ -67,9 +64,9 @@ class OBJECT_OT_array3d(bpy.types.Operator):
     bl_label = "Add Array 3D"
     bl_options = { 'REGISTER', 'UNDO' }
 
-    count_x: P.IntProperty(name='Count X', default=2, min=1)
-    count_y: P.IntProperty(name='Count Y', default=2, min=1)
-    count_z: P.IntProperty(name='Count Z', default=2, min=1)
+    count_x: bpy.props.IntProperty(name='Count X', default=2, min=1)
+    count_y: bpy.props.IntProperty(name='Count Y', default=2, min=1)
+    count_z: bpy.props.IntProperty(name='Count Z', default=2, min=1)
 
     @classmethod
     def poll(cls, context):
@@ -77,9 +74,9 @@ class OBJECT_OT_array3d(bpy.types.Operator):
     
     def execute(self, context):
         try:
-            O.object.modifier_add(type='ARRAY')
-            O.object.modifier_add(type='ARRAY')
-            O.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
+            bpy.ops.object.modifier_add(type='ARRAY')
 
             active = context.active_object
 

@@ -23,7 +23,7 @@ class OBJECT_OT_corncube(bpy.types.Operator):
 
 class OBJECT_OT_botcube(bpy.types.Operator):
     bl_idname = "mesh.primitive_bottomcube_add"
-    bl_label = "Bottom Cube"
+    bl_label = "Bottom Cube" #🥺👉👈
     bl_options = { 'REGISTER', 'UNDO' }
 
     def execute(self, context):
