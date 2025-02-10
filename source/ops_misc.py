@@ -1,5 +1,4 @@
 import bpy
-from . import util
 
 
 class OBJECT_OT_quickbevel(bpy.types.Operator):
@@ -29,13 +28,11 @@ class OBJECT_OT_quickbevel(bpy.types.Operator):
         return { 'FINISHED' }
 
 
-class OBJECT_OT_customcube(bpy.types.Operator):
-    """Construct a cube with a custom origin"""
-    bl_idname = "object.customcube"
-    bl_label = "Construct Cube"
+class OBJECT_OT_quickmirror(bpy.types.Operator):
+    """Mirror"""
+    bl_idname = "object.quickmirror"
+    bl_label = "Quick Mirror"
     bl_options = { 'REGISTER', 'UNDO' }
-
-    location: bpy.props.FloatVectorProperty(name='Location', default=(0, 0, 0))
 
     @classmethod
     def poll(cls, context):
@@ -43,7 +40,7 @@ class OBJECT_OT_customcube(bpy.types.Operator):
     
     def execute(self, context):
         try:
-            util.construct_cube(self.location)
+            bpy.ops.object.modifier_add(type='MIRROR')
         except RuntimeError:
             pass
 

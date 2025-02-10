@@ -9,7 +9,7 @@ class VIEW3D_PT_ddd_utils(bpy.types.Panel):
 
     def draw(self, context):
         self.layout.operator('object.quickbevel')
-        self.layout.operator('object.customcube')
+        self.layout.operator('object.quickmirror')
 
 
 class VIEW3D_PT_ddd_array(bpy.types.Panel):
