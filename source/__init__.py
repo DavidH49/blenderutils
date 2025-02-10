@@ -17,7 +17,7 @@ bl_info = {
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
-    "version": (1, 3, 0),
+    "version": (1, 4, 0),
     "location": "",
     "warning": "",
     "category": "Generic",
@@ -26,14 +26,14 @@ bl_info = {
 if "bpy" in locals():
     import importlib
     importlib.reload(ui)
-    importlib.reload(bevel)
-    importlib.reload(array)
+    importlib.reload(ops_misc)
+    importlib.reload(ops_array)
     importlib.reload(objects)
     importlib.reload(util)
 else:
     from . import ui
-    from . import bevel
-    from . import array
+    from . import ops_misc
+    from . import ops_array
     from . import objects
     from . import util
 
@@ -43,11 +43,11 @@ import bpy
 def register():
     bpy.utils.register_class(ui.VIEW3D_PT_ddd_utils)
     bpy.utils.register_class(ui.VIEW3D_PT_ddd_array)
-    bpy.utils.register_class(bevel.OBJECT_OT_quickbevel)
-    bpy.utils.register_class(bevel.OBJECT_OT_quickmirror)
-    bpy.utils.register_class(array.OBJECT_OT_array1d)
-    bpy.utils.register_class(array.OBJECT_OT_array2d)
-    bpy.utils.register_class(array.OBJECT_OT_array3d)
+    bpy.utils.register_class(ops_misc.OBJECT_OT_quickbevel)
+    bpy.utils.register_class(ops_misc.OBJECT_OT_quickmirror)
+    bpy.utils.register_class(ops_array.OBJECT_OT_array1d)
+    bpy.utils.register_class(ops_array.OBJECT_OT_array2d)
+    bpy.utils.register_class(ops_array.OBJECT_OT_array3d)
     bpy.utils.register_class(objects.OBJECT_OT_corncube)
     bpy.utils.register_class(objects.OBJECT_OT_botcube)
 
@@ -57,11 +57,11 @@ def register():
 def unregister():
     bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_utils)
     bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_array)
-    bpy.utils.unregister_class(bevel.OBJECT_OT_quickbevel)
-    bpy.utils.unregister_class(bevel.OBJECT_OT_quickmirror)
-    bpy.utils.unregister_class(array.OBJECT_OT_array1d)
-    bpy.utils.unregister_class(array.OBJECT_OT_array2d)
-    bpy.utils.unregister_class(array.OBJECT_OT_array3d)
+    bpy.utils.unregister_class(ops_misc.OBJECT_OT_quickbevel)
+    bpy.utils.unregister_class(ops_misc.OBJECT_OT_quickmirror)
+    bpy.utils.unregister_class(ops_array.OBJECT_OT_array1d)
+    bpy.utils.unregister_class(ops_array.OBJECT_OT_array2d)
+    bpy.utils.unregister_class(ops_array.OBJECT_OT_array3d)
     bpy.utils.unregister_class(objects.OBJECT_OT_corncube)
     bpy.utils.unregister_class(objects.OBJECT_OT_botcube)
 
