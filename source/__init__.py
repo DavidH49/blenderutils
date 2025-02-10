@@ -28,13 +28,13 @@ if "bpy" in locals():
     importlib.reload(ui)
     importlib.reload(ops_misc)
     importlib.reload(ops_array)
-    importlib.reload(objects)
+    importlib.reload(ops_objects)
     importlib.reload(util)
 else:
     from . import ui
     from . import ops_misc
     from . import ops_array
-    from . import objects
+    from . import ops_objects
     from . import util
 
 import bpy
@@ -48,10 +48,10 @@ def register():
     bpy.utils.register_class(ops_array.OBJECT_OT_array1d)
     bpy.utils.register_class(ops_array.OBJECT_OT_array2d)
     bpy.utils.register_class(ops_array.OBJECT_OT_array3d)
-    bpy.utils.register_class(objects.OBJECT_OT_corncube)
-    bpy.utils.register_class(objects.OBJECT_OT_botcube)
+    bpy.utils.register_class(ops_objects.OBJECT_OT_corncube)
+    bpy.utils.register_class(ops_objects.OBJECT_OT_botcube)
 
-    bpy.types.VIEW3D_MT_mesh_add.append(objects.menu_func)
+    bpy.types.VIEW3D_MT_mesh_add.append(ops_objects.menu_func)
 
 
 def unregister():
@@ -62,10 +62,10 @@ def unregister():
     bpy.utils.unregister_class(ops_array.OBJECT_OT_array1d)
     bpy.utils.unregister_class(ops_array.OBJECT_OT_array2d)
     bpy.utils.unregister_class(ops_array.OBJECT_OT_array3d)
-    bpy.utils.unregister_class(objects.OBJECT_OT_corncube)
-    bpy.utils.unregister_class(objects.OBJECT_OT_botcube)
+    bpy.utils.unregister_class(ops_objects.OBJECT_OT_corncube)
+    bpy.utils.unregister_class(ops_objects.OBJECT_OT_botcube)
 
-    bpy.types.VIEW3D_MT_mesh_add.remove(objects.menu_func)
+    bpy.types.VIEW3D_MT_mesh_add.remove(ops_objects.menu_func)
 
 
 if __package__ == "__main__":
