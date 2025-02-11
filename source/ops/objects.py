@@ -1,5 +1,8 @@
+# SPDX-FileCopyrightText: 2025 DDD
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 import bpy
-from . import util
+from .. import util
 
 
 class OBJECT_OT_corncube(bpy.types.Operator):
@@ -20,8 +23,3 @@ class OBJECT_OT_botcube(bpy.types.Operator):
     def execute(self, context):
         util.construct_cube((0, 0, 1))
         return { 'FINISHED' }
-
-
-def menu_func(self, context):
-    self.layout.operator(OBJECT_OT_corncube.bl_idname, icon='MESH_CUBE')
-    self.layout.operator(OBJECT_OT_botcube.bl_idname, icon='MESH_CUBE')
