@@ -16,5 +16,5 @@ I made this addon for my specific personal workflow, so I can quickly add things
 * Corner Cube
 
 ## Building
-To build the extension, run *build.sh* or *build.bat*  
+To build the extension, run *build.sh* or *build.bat*, depending on your OS.  
 If buildung fails, check if your blender executable is in your system's PATH.
