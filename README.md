@@ -3,7 +3,7 @@
 Very simple utility addon.  
 I made this addon for my specific personal workflow, so I can quickly add things like a cube with its origin on its bottom face, which I have to do very often.
 
-## Version 1.4.0 contains:
+## Version 2.0.0 contains:
 #### Operators | Side Panel -> DDD
 * Quick Bevel
 * Quick Mirror
