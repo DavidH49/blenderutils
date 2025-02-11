@@ -26,16 +26,16 @@ bl_info = {
 if "bpy" in locals():
     import importlib
     importlib.reload(ui)
-    importlib.reload(ops_misc)
-    importlib.reload(ops_array)
-    importlib.reload(ops_objects)
+    importlib.reload(misc)
+    importlib.reload(array)
+    importlib.reload(objects)
     importlib.reload(util)
 else:
     from . import ui
-    from . import ops_misc
-    from . import ops_array
-    from . import ops_objects
     from . import util
+    from .ops import misc
+    from .ops import array
+    from .ops import objects
 
 import bpy
 
@@ -43,13 +43,13 @@ import bpy
 CLASSES = (
     ui.VIEW3D_PT_ddd_utils,
     ui.VIEW3D_PT_ddd_array,
-    ops_misc.OBJECT_OT_quickbevel,
-    ops_misc.OBJECT_OT_quickmirror,
-    ops_array.OBJECT_OT_array1d,
-    ops_array.OBJECT_OT_array2d,
-    ops_array.OBJECT_OT_array3d,
-    ops_objects.OBJECT_OT_corncube,
-    ops_objects.OBJECT_OT_botcube
+    misc.OBJECT_OT_quickbevel,
+    misc.OBJECT_OT_quickmirror,
+    array.OBJECT_OT_array1d,
+    array.OBJECT_OT_array2d,
+    array.OBJECT_OT_array3d,
+    objects.OBJECT_OT_corncube,
+    objects.OBJECT_OT_botcube
 )
 
 
@@ -57,14 +57,14 @@ def register():
     for c in CLASSES:
         bpy.utils.register_class(c)
 
-    bpy.types.VIEW3D_MT_mesh_add.append(ops_objects.menu_func)
+    bpy.types.VIEW3D_MT_mesh_add.append(objects.menu_func)
 
 
 def unregister():
     for c in reversed(CLASSES):
         bpy.utils.unregister_class(c)
 
-    bpy.types.VIEW3D_MT_mesh_add.remove(ops_objects.menu_func)
+    bpy.types.VIEW3D_MT_mesh_add.remove(objects.menu_func)
 
 
 if __package__ == "__main__":

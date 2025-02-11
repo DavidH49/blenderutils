@@ -1,5 +1,5 @@
 import bpy
-from . import util
+from .. import util
 
 
 class OBJECT_OT_corncube(bpy.types.Operator):
