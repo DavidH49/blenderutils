@@ -1,17 +1,6 @@
 # SPDX-FileCopyrightText: 2025 DDD
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-bl_info = {
-    "name": "DDDs Blenderutils",
-    "author": "DDD",
-    "description": "",
-    "blender": (4, 2, 2),
-    "version": (2, 0, 0),
-    "location": "",
-    "warning": "",
-    "category": "Generic",
-}
-
 
 from .ops import misc
 from .ops import array
