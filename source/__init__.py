@@ -17,7 +17,7 @@ bl_info = {
     "author": "DDD",
     "description": "",
     "blender": (4, 2, 2),
-    "version": (1, 4, 0),
+    "version": (2, 0, 0),
     "location": "",
     "warning": "",
     "category": "Generic",
@@ -40,30 +40,29 @@ else:
 import bpy
 
 
+CLASSES = (
+    ui.VIEW3D_PT_ddd_utils,
+    ui.VIEW3D_PT_ddd_array,
+    ops_misc.OBJECT_OT_quickbevel,
+    ops_misc.OBJECT_OT_quickmirror,
+    ops_array.OBJECT_OT_array1d,
+    ops_array.OBJECT_OT_array2d,
+    ops_array.OBJECT_OT_array3d,
+    ops_objects.OBJECT_OT_corncube,
+    ops_objects.OBJECT_OT_botcube
+)
+
+
 def register():
-    bpy.utils.register_class(ui.VIEW3D_PT_ddd_utils)
-    bpy.utils.register_class(ui.VIEW3D_PT_ddd_array)
-    bpy.utils.register_class(ops_misc.OBJECT_OT_quickbevel)
-    bpy.utils.register_class(ops_misc.OBJECT_OT_quickmirror)
-    bpy.utils.register_class(ops_array.OBJECT_OT_array1d)
-    bpy.utils.register_class(ops_array.OBJECT_OT_array2d)
-    bpy.utils.register_class(ops_array.OBJECT_OT_array3d)
-    bpy.utils.register_class(ops_objects.OBJECT_OT_corncube)
-    bpy.utils.register_class(ops_objects.OBJECT_OT_botcube)
+    for c in CLASSES:
+        bpy.utils.register_class(c)
 
     bpy.types.VIEW3D_MT_mesh_add.append(ops_objects.menu_func)
 
 
 def unregister():
-    bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_utils)
-    bpy.utils.unregister_class(ui.VIEW3D_PT_ddd_array)
-    bpy.utils.unregister_class(ops_misc.OBJECT_OT_quickbevel)
-    bpy.utils.unregister_class(ops_misc.OBJECT_OT_quickmirror)
-    bpy.utils.unregister_class(ops_array.OBJECT_OT_array1d)
-    bpy.utils.unregister_class(ops_array.OBJECT_OT_array2d)
-    bpy.utils.unregister_class(ops_array.OBJECT_OT_array3d)
-    bpy.utils.unregister_class(ops_objects.OBJECT_OT_corncube)
-    bpy.utils.unregister_class(ops_objects.OBJECT_OT_botcube)
+    for c in reversed(CLASSES):
+        bpy.utils.unregister_class(c)
 
     bpy.types.VIEW3D_MT_mesh_add.remove(ops_objects.menu_func)
 
