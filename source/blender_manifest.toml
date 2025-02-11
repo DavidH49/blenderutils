@@ -3,11 +3,9 @@ id = "ddds_blenderutils"
 name = "DDDs Blenderutils"
 version = "2.0.0"
 tagline = "Small utility extension"
-maintainer = "Daniel D. Dauersuff"
+maintainer = "Daniel D. Dauersuff <david@mh-network.net>"
 type = "add-on"
 website = "https://github.com/DavidH49/blenderutils"
 tags = ["3D View", "Object"]
 blender_version_min = "4.2.0"
-license = [
-  "SPDX:GPL-2.0-or-later",
-]
+license = ["SPDX:GPL-3.0-or-later"]
