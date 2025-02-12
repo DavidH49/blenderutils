@@ -10,8 +10,7 @@ import bpy
 
 
 CLASSES = (
-    ui.VIEW3D_PT_ddd_utils,
-    ui.VIEW3D_PT_ddd_array,
+    ui.VIEW3D_PT_ddd_panel,
     modifiers.OBJECT_OT_quickbevel,
     modifiers.OBJECT_OT_quickmirror,
     modifiers.OBJECT_OT_array1d,
