@@ -1,11 +1,9 @@
 # SPDX-FileCopyrightText: 2025 DDD
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
-from .ops import misc
-from .ops import array
-from .ops import objects
-from . import util
+from .ops import modifiers
+from .ops import add_obj
+from .ops import edit_obj
 from . import ui
 
 import bpy
@@ -14,13 +12,15 @@ import bpy
 CLASSES = (
     ui.VIEW3D_PT_ddd_utils,
     ui.VIEW3D_PT_ddd_array,
-    misc.OBJECT_OT_quickbevel,
-    misc.OBJECT_OT_quickmirror,
-    array.OBJECT_OT_array1d,
-    array.OBJECT_OT_array2d,
-    array.OBJECT_OT_array3d,
-    objects.OBJECT_OT_corncube,
-    objects.OBJECT_OT_botcube
+    modifiers.OBJECT_OT_quickbevel,
+    modifiers.OBJECT_OT_quickmirror,
+    modifiers.OBJECT_OT_array1d,
+    modifiers.OBJECT_OT_array2d,
+    modifiers.OBJECT_OT_array3d,
+    edit_obj.OBJECT_OT_resetobj,
+    add_obj.OBJECT_OT_corncube,
+    add_obj.OBJECT_OT_edgecube,
+    add_obj.OBJECT_OT_botcube
 )
 
 
