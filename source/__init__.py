@@ -4,7 +4,6 @@
 from .ops import modifiers
 from .ops import add_obj
 from .ops import edit_obj
-from . import util
 from . import ui
 
 import bpy
@@ -20,6 +19,7 @@ CLASSES = (
     modifiers.OBJECT_OT_array3d,
     edit_obj.OBJECT_OT_resetobj,
     add_obj.OBJECT_OT_corncube,
+    add_obj.OBJECT_OT_edgecube,
     add_obj.OBJECT_OT_botcube
 )
 

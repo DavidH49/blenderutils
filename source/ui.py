@@ -31,4 +31,5 @@ class VIEW3D_PT_ddd_array(bpy.types.Panel):
 
 def objects_menu(self, context):
     self.layout.operator(add_obj.OBJECT_OT_corncube.bl_idname, icon='MESH_CUBE')
+    self.layout.operator(add_obj.OBJECT_OT_edgecube.bl_idname, icon='MESH_CUBE')
     self.layout.operator(add_obj.OBJECT_OT_botcube.bl_idname, icon='MESH_CUBE')
