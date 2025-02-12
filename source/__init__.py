@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2025 DDD
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
 from .ops import modifiers
 from .ops import add_obj
 from .ops import edit_obj
