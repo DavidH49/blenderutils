@@ -5,7 +5,7 @@ I made this addon for my personal workflow, so I can quickly add things I have t
 
 
 ## Version 2.2.0 contains:
-#### Operators | Side Panel > Item > DDD - Util
+#### Operators | Sidebar > Item > DDD - Util
 * Reset Transform
 * Bevel
 * Mirror
