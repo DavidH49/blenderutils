@@ -4,6 +4,7 @@
 
 from .ops import misc
 from .ops import array
+from .ops import obj
 from .ops import objects
 from . import util
 from . import ui
@@ -19,6 +20,7 @@ CLASSES = (
     array.OBJECT_OT_array1d,
     array.OBJECT_OT_array2d,
     array.OBJECT_OT_array3d,
+    obj.OBJECT_OT_resetobj,
     objects.OBJECT_OT_corncube,
     objects.OBJECT_OT_botcube
 )

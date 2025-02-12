@@ -3,6 +3,7 @@
 
 import bpy
 from . import objects
+from . import obj
 
 
 class VIEW3D_PT_ddd_utils(bpy.types.Panel):
@@ -12,6 +13,7 @@ class VIEW3D_PT_ddd_utils(bpy.types.Panel):
     bl_label = 'Util'
 
     def draw(self, context):
+        self.layout.operator('object.resetobj')
         self.layout.operator('object.quickbevel')
         self.layout.operator('object.quickmirror')
 
