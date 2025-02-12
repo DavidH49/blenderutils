@@ -1,20 +1,23 @@
 # DDDs Blenderutils
 
 Very simple utility addon.  
-I made this addon for my specific personal workflow, so I can quickly add things like a cube with its origin on its bottom face, which I have to do very often.
+I made this addon for my personal workflow, so I can quickly add things I have to use all the time, such as bevel modifiers.
 
 
-## Version 2.0.0 contains:
-#### Operators | Side Panel -> DDD
-* Quick Bevel
-* Quick Mirror
+## Version 2.1.0 contains:
+#### Operators | Side Panel > DDD
+* Reset Transform
+* Bevel
+* Mirror
 * Array 1D
 * Array 2D
 * Array 3D
 
-#### Objects | Add Object -> Mesh
+#### Objects | Add Object > Mesh
 * Bottom Cube
+* Edge Cube
 * Corner Cube
+
 
 ## Building
 To build the extension, run *build.sh* or *build.bat*, depending on your OS.  

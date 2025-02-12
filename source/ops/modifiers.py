@@ -101,7 +101,7 @@ class OBJECT_OT_array3d(bpy.types.Operator):
 class OBJECT_OT_quickbevel(bpy.types.Operator):
     """Bevel"""
     bl_idname = "object.quickbevel"
-    bl_label = "Quick Bevel"
+    bl_label = "Add Bevel"
     bl_options = { 'REGISTER', 'UNDO' }
 
     width: bpy.props.FloatProperty(name='Amount', default=0.1, min=0)
@@ -128,7 +128,7 @@ class OBJECT_OT_quickbevel(bpy.types.Operator):
 class OBJECT_OT_quickmirror(bpy.types.Operator):
     """Mirror"""
     bl_idname = "object.quickmirror"
-    bl_label = "Quick Mirror"
+    bl_label = "Add Mirror"
     bl_options = { 'REGISTER', 'UNDO' }
 
     @classmethod

@@ -7,7 +7,7 @@ import bpy
 class OBJECT_OT_resetobj(bpy.types.Operator):
     """Resets the selected object's transform"""
     bl_idname = "object.resetobj"
-    bl_label = "Reset Object"
+    bl_label = "Reset Transform"
     bl_options = { 'REGISTER', 'UNDO' }
 
     clear_delta: bpy.props.BoolProperty(name='Clear Delta', default=True)
