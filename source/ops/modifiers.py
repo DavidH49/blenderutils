@@ -138,6 +138,7 @@ class OBJECT_OT_quickmirror(bpy.types.Operator):
     def execute(self, context):
         try:
             bpy.ops.object.modifier_add(type='MIRROR')
+        
         except RuntimeError:
             pass
 
