@@ -4,8 +4,8 @@ Very simple utility addon.
 I made this addon for my personal workflow, so I can quickly add things I have to use all the time, such as bevel modifiers.
 
 
-## Version 2.1.0 contains:
-#### Operators | Side Panel > DDD
+## Version 2.2.0 contains:
+#### Operators | Side Panel > Item > DDD - Util
 * Reset Transform
 * Bevel
 * Mirror
@@ -13,7 +13,7 @@ I made this addon for my personal workflow, so I can quickly add things I have t
 * Array 2D
 * Array 3D
 
-#### Objects | Add Object > Mesh
+#### Objects | Add > Mesh
 * Bottom Cube
 * Edge Cube
 * Corner Cube
